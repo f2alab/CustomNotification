@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static F2a_Notification.PositionEnum;
 
@@ -84,14 +77,6 @@ namespace F2a_Notification
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
         }
 
-        //public Notification(Form parent)
-        //{
-        //    InitializeComponent();
-        //    //ParentForm = parent;
-        //    this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
-        //}
-
 
         private void Notification_Load(object sender, EventArgs e)
         {
@@ -106,17 +91,7 @@ namespace F2a_Notification
             }
             SlideAnimation();
 
-            ////NOTIFICATION DE BAS
-            //if (PositionString.Equals("B"))
-            //{
-                
-            //}
-
-            ////NOTIFICATION DE HAUT
-            //else
-            //{
-                
-            //}
+            
         }
 
         private void TimerTemps_Tick(object sender, EventArgs e)
@@ -133,28 +108,7 @@ namespace F2a_Notification
         {
             this.Opacity -= 0.1;
             Disparition();
-            ////NOTIFICATION DE BAS
-            //if (PositionString.Equals("B"))
-            //{
-            //    this.Top += 2;
-            //    if (this.Opacity <= 0)
-            //    {
-            //        this.Close();
-            //        TimerDisparition.Stop();
-            //    }
-            //}
-            ////NOTIFICATION DE HAUT
-            //else
-            //{
-            //    this.Top -= 2;
-            //    if (this.Opacity <= 0)
-            //    {
-            //        this.Close();
-            //        TimerDisparition.Stop();
-            //    }
-            //}
-
-
+           
         }
 
         private void FormLocation()

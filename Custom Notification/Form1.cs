@@ -1,12 +1,5 @@
-﻿using F2a_Notification.Properties;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static F2a_Notification.PositionEnum;
 
@@ -19,7 +12,6 @@ namespace F2a_Notification
             InitializeComponent();
         }
 
-
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Threading.Timer timer = new System.Threading.Timer(Repeat, null, 0, 2000);
@@ -27,7 +19,7 @@ namespace F2a_Notification
             F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Green, position: Position.TopLeft);
             F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Violet, position: Position.LeftCenter);
             F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.DarkTurquoise, position: Position.TopCenter);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Pink, position: Position.TopRight);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Blue, position: Position.TopRight);
             F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Gray, position: Position.RightCenter);
             F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Gold, position: Position.BottomRight);
             F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.BlueViolet, position: Position.BottomCenter);
