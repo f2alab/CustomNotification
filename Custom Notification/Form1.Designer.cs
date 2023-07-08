@@ -159,6 +159,7 @@
             this.Text = "Custom Notification";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
             this.ResumeLayout(false);
 
         }

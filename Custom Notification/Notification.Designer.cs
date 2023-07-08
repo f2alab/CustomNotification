@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.PanelTitrePrincipal = new System.Windows.Forms.Panel();
-            this.ProgressBarTemps = new System.Windows.Forms.ProgressBar();
+            this.PanelTitre0 = new System.Windows.Forms.Panel();
             this.LabelTitre = new System.Windows.Forms.Label();
+            this.ProgressBarTemps = new System.Windows.Forms.ProgressBar();
+            this.PanelIcon = new System.Windows.Forms.Panel();
             this.PictureBoxIcon = new System.Windows.Forms.PictureBox();
-            this.LabelMessage = new System.Windows.Forms.Label();
-            this.PanelBarre = new System.Windows.Forms.Panel();
-            this.PanelMessage = new System.Windows.Forms.Panel();
             this.TimerAnim = new System.Windows.Forms.Timer(this.components);
             this.TimerTemps = new System.Windows.Forms.Timer(this.components);
             this.TimerDisparition = new System.Windows.Forms.Timer(this.components);
-            this.PanelIcon = new System.Windows.Forms.Panel();
-            this.PanelTitre0 = new System.Windows.Forms.Panel();
+            this.PanelBarre = new System.Windows.Forms.Panel();
+            this.PanelMessage = new System.Windows.Forms.Panel();
+            this.LabelMessage = new System.Windows.Forms.Label();
             this.PanelTitrePrincipal.SuspendLayout();
+            this.PanelTitre0.SuspendLayout();
+            this.PanelIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxIcon)).BeginInit();
             this.PanelMessage.SuspendLayout();
-            this.PanelIcon.SuspendLayout();
-            this.PanelTitre0.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelTitrePrincipal
@@ -55,8 +55,37 @@
             this.PanelTitrePrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitrePrincipal.Location = new System.Drawing.Point(0, 0);
             this.PanelTitrePrincipal.Name = "PanelTitrePrincipal";
-            this.PanelTitrePrincipal.Size = new System.Drawing.Size(250, 35);
+            this.PanelTitrePrincipal.Size = new System.Drawing.Size(260, 53);
             this.PanelTitrePrincipal.TabIndex = 3;
+            // 
+            // PanelTitre0
+            // 
+            this.PanelTitre0.AutoSize = true;
+            this.PanelTitre0.Controls.Add(this.LabelTitre);
+            this.PanelTitre0.Controls.Add(this.ProgressBarTemps);
+            this.PanelTitre0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelTitre0.Location = new System.Drawing.Point(34, 0);
+            this.PanelTitre0.Name = "PanelTitre0";
+            this.PanelTitre0.Size = new System.Drawing.Size(226, 53);
+            this.PanelTitre0.TabIndex = 1;
+            // 
+            // LabelTitre
+            // 
+            this.LabelTitre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelTitre.AutoEllipsis = true;
+            this.LabelTitre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTitre.Location = new System.Drawing.Point(3, 4);
+            this.LabelTitre.Name = "LabelTitre";
+            this.LabelTitre.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.LabelTitre.Size = new System.Drawing.Size(215, 44);
+            this.LabelTitre.TabIndex = 1;
+            this.LabelTitre.Text = "TITRE";
+            this.LabelTitre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LabelTitre.MouseEnter += new System.EventHandler(this.LabelTitre_MouseEnter);
+            this.LabelTitre.MouseLeave += new System.EventHandler(this.LabelTitre_MouseLeave);
+            this.LabelTitre.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LabelTitre_MouseUp);
             // 
             // ProgressBarTemps
             // 
@@ -66,22 +95,24 @@
             this.ProgressBarTemps.TabIndex = 2;
             this.ProgressBarTemps.Visible = false;
             // 
-            // LabelTitre
+            // PanelIcon
             // 
-            this.LabelTitre.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LabelTitre.AutoSize = true;
-            this.LabelTitre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitre.Location = new System.Drawing.Point(10, 8);
-            this.LabelTitre.Name = "LabelTitre";
-            this.LabelTitre.Size = new System.Drawing.Size(44, 19);
-            this.LabelTitre.TabIndex = 1;
-            this.LabelTitre.Text = "TITRE";
+            this.PanelIcon.Controls.Add(this.PictureBoxIcon);
+            this.PanelIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelIcon.Location = new System.Drawing.Point(0, 0);
+            this.PanelIcon.MinimumSize = new System.Drawing.Size(34, 35);
+            this.PanelIcon.Name = "PanelIcon";
+            this.PanelIcon.Size = new System.Drawing.Size(34, 53);
+            this.PanelIcon.TabIndex = 0;
+            this.PanelIcon.MouseEnter += new System.EventHandler(this.PanelIcon_MouseEnter);
+            this.PanelIcon.MouseLeave += new System.EventHandler(this.PanelIcon_MouseLeave);
+            this.PanelIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelIcon_MouseUp);
             // 
             // PictureBoxIcon
             // 
             this.PictureBoxIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PictureBoxIcon.Image = global::F2a_Notification.Properties.Resources.Done_26px;
-            this.PictureBoxIcon.Location = new System.Drawing.Point(5, 5);
+            this.PictureBoxIcon.Location = new System.Drawing.Point(5, 14);
             this.PictureBoxIcon.MaximumSize = new System.Drawing.Size(25, 25);
             this.PictureBoxIcon.MinimumSize = new System.Drawing.Size(25, 25);
             this.PictureBoxIcon.Name = "PictureBoxIcon";
@@ -89,36 +120,9 @@
             this.PictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxIcon.TabIndex = 0;
             this.PictureBoxIcon.TabStop = false;
-            // 
-            // LabelMessage
-            // 
-            this.LabelMessage.AutoSize = true;
-            this.LabelMessage.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMessage.Location = new System.Drawing.Point(2, 0);
-            this.LabelMessage.MaximumSize = new System.Drawing.Size(250, 0);
-            this.LabelMessage.Name = "LabelMessage";
-            this.LabelMessage.Padding = new System.Windows.Forms.Padding(8);
-            this.LabelMessage.Size = new System.Drawing.Size(90, 34);
-            this.LabelMessage.TabIndex = 1;
-            this.LabelMessage.Text = "Message";
-            // 
-            // PanelBarre
-            // 
-            this.PanelBarre.BackColor = System.Drawing.Color.White;
-            this.PanelBarre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelBarre.Location = new System.Drawing.Point(0, 35);
-            this.PanelBarre.Name = "PanelBarre";
-            this.PanelBarre.Size = new System.Drawing.Size(250, 5);
-            this.PanelBarre.TabIndex = 4;
-            // 
-            // PanelMessage
-            // 
-            this.PanelMessage.AutoSize = true;
-            this.PanelMessage.Controls.Add(this.LabelMessage);
-            this.PanelMessage.Location = new System.Drawing.Point(0, 40);
-            this.PanelMessage.Name = "PanelMessage";
-            this.PanelMessage.Size = new System.Drawing.Size(250, 66);
-            this.PanelMessage.TabIndex = 6;
+            this.PictureBoxIcon.MouseEnter += new System.EventHandler(this.PictureBoxIcon_MouseEnter);
+            this.PictureBoxIcon.MouseLeave += new System.EventHandler(this.PictureBoxIcon_MouseLeave);
+            this.PictureBoxIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBoxIcon_MouseUp);
             // 
             // TimerAnim
             // 
@@ -135,26 +139,41 @@
             // 
             this.TimerDisparition.Tick += new System.EventHandler(this.TimerDisparition_Tick);
             // 
-            // PanelIcon
+            // PanelBarre
             // 
-            this.PanelIcon.Controls.Add(this.PictureBoxIcon);
-            this.PanelIcon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelIcon.Location = new System.Drawing.Point(0, 0);
-            this.PanelIcon.MaximumSize = new System.Drawing.Size(34, 35);
-            this.PanelIcon.MinimumSize = new System.Drawing.Size(34, 35);
-            this.PanelIcon.Name = "PanelIcon";
-            this.PanelIcon.Size = new System.Drawing.Size(34, 35);
-            this.PanelIcon.TabIndex = 0;
+            this.PanelBarre.BackColor = System.Drawing.Color.White;
+            this.PanelBarre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelBarre.Location = new System.Drawing.Point(0, 53);
+            this.PanelBarre.Name = "PanelBarre";
+            this.PanelBarre.Size = new System.Drawing.Size(260, 5);
+            this.PanelBarre.TabIndex = 4;
+            this.PanelBarre.MouseEnter += new System.EventHandler(this.PanelBarre_MouseEnter);
+            this.PanelBarre.MouseLeave += new System.EventHandler(this.PanelBarre_MouseLeave);
+            this.PanelBarre.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelBarre_MouseUp);
             // 
-            // PanelTitre0
+            // PanelMessage
             // 
-            this.PanelTitre0.Controls.Add(this.ProgressBarTemps);
-            this.PanelTitre0.Controls.Add(this.LabelTitre);
-            this.PanelTitre0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelTitre0.Location = new System.Drawing.Point(34, 0);
-            this.PanelTitre0.Name = "PanelTitre0";
-            this.PanelTitre0.Size = new System.Drawing.Size(216, 35);
-            this.PanelTitre0.TabIndex = 1;
+            this.PanelMessage.AutoSize = true;
+            this.PanelMessage.Controls.Add(this.LabelMessage);
+            this.PanelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelMessage.Location = new System.Drawing.Point(0, 58);
+            this.PanelMessage.Name = "PanelMessage";
+            this.PanelMessage.Size = new System.Drawing.Size(260, 90);
+            this.PanelMessage.TabIndex = 7;
+            // 
+            // LabelMessage
+            // 
+            this.LabelMessage.AutoEllipsis = true;
+            this.LabelMessage.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMessage.Location = new System.Drawing.Point(0, 0);
+            this.LabelMessage.Name = "LabelMessage";
+            this.LabelMessage.Padding = new System.Windows.Forms.Padding(8);
+            this.LabelMessage.Size = new System.Drawing.Size(260, 91);
+            this.LabelMessage.TabIndex = 1;
+            this.LabelMessage.Text = "Message";
+            this.LabelMessage.MouseEnter += new System.EventHandler(this.LabelMessage_MouseEnter);
+            this.LabelMessage.MouseLeave += new System.EventHandler(this.LabelMessage_MouseLeave);
+            this.LabelMessage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LabelMessage_MouseUp);
             // 
             // Notification
             // 
@@ -162,7 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(250, 105);
+            this.ClientSize = new System.Drawing.Size(260, 148);
             this.Controls.Add(this.PanelMessage);
             this.Controls.Add(this.PanelBarre);
             this.Controls.Add(this.PanelTitrePrincipal);
@@ -180,12 +199,11 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Notification_Load);
             this.PanelTitrePrincipal.ResumeLayout(false);
+            this.PanelTitrePrincipal.PerformLayout();
+            this.PanelTitre0.ResumeLayout(false);
+            this.PanelIcon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxIcon)).EndInit();
             this.PanelMessage.ResumeLayout(false);
-            this.PanelMessage.PerformLayout();
-            this.PanelIcon.ResumeLayout(false);
-            this.PanelTitre0.ResumeLayout(false);
-            this.PanelTitre0.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,16 +212,16 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelTitrePrincipal;
-        private System.Windows.Forms.Label LabelTitre;
-        private System.Windows.Forms.PictureBox PictureBoxIcon;
-        private System.Windows.Forms.Label LabelMessage;
-        private System.Windows.Forms.Panel PanelBarre;
-        private System.Windows.Forms.Panel PanelMessage;
         private System.Windows.Forms.Timer TimerAnim;
         private System.Windows.Forms.Timer TimerTemps;
-        private System.Windows.Forms.ProgressBar ProgressBarTemps;
         private System.Windows.Forms.Timer TimerDisparition;
         private System.Windows.Forms.Panel PanelIcon;
         private System.Windows.Forms.Panel PanelTitre0;
+        private System.Windows.Forms.ProgressBar ProgressBarTemps;
+        private System.Windows.Forms.Label LabelTitre;
+        private System.Windows.Forms.PictureBox PictureBoxIcon;
+        private System.Windows.Forms.Panel PanelBarre;
+        private System.Windows.Forms.Panel PanelMessage;
+        private System.Windows.Forms.Label LabelMessage;
     }
 }

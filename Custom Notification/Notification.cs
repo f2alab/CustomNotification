@@ -36,34 +36,27 @@ namespace F2a_Notification
 
         #endregion [ROUNDED BORDER AND SHADOW]
 
-        private readonly Form FormParent;
-        private string Titre;
-        private string Message;
-        private Image Image;
-        private Color BackgroundColor;
-        private Color TextColor;
-        private Position Position;
-        
+        #region [VARIABLES]
+        readonly Form FormParent;
+        readonly Position Position;
+        //readonly string Titre;
+        //readonly string Message;
+        //readonly Image Image;
+        //readonly Color BackgroundColor;
+        //readonly Color TextColor;
+        #endregion [VARIABLES]
 
-        public Notification()
+        #region [FORM EVENTS]
+        public Notification(Form parentForm, string titre, string message, Image icon, Color backColor, Color textColor, Color separatorColor, Position position)
         {
             InitializeComponent();
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            
-        }
-        
-       
-        public Notification(Form parentForm, string titre, string message, Image icon, Color backColor, Color textColor, Position position)
-        {
-            InitializeComponent();
-            FormParent = parentForm;
-            this.Titre = titre;
-            this.Message = message;
-            this.Image = icon;
-            this.BackColor = backColor;
-            this.TextColor = textColor;
+            this.FormParent = parentForm;
             this.Position = position;
-
+            //this.Titre = titre;
+            //this.Message = message;
+            //this.Image = icon;
+            //this.BackColor = backColor;
+            //this.TextColor = textColor;
 
             //DEFINIR PARAMETRES
             LabelTitre.Text = titre;
@@ -72,17 +65,20 @@ namespace F2a_Notification
             this.BackColor = backColor;
             LabelTitre.ForeColor = textColor;
             LabelMessage.ForeColor = textColor;
+            PanelBarre.BackColor = separatorColor;
 
             //DEFINIR BORD ARRONDI
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
         }
 
-
         private void Notification_Load(object sender, EventArgs e)
         {
             FormLocation();
         }
+        #endregion [FORM EVENTS]
 
+
+        #region [TIMER]
         private void TimerSlideAnim_Tick(object sender, EventArgs e)
         {
             if (this.Opacity <= 1)
@@ -91,7 +87,6 @@ namespace F2a_Notification
             }
             SlideAnimation();
 
-            
         }
 
         private void TimerTemps_Tick(object sender, EventArgs e)
@@ -102,18 +97,19 @@ namespace F2a_Notification
                 TimerTemps.Stop();
                 TimerDisparition.Start();
             }
+
         }
 
         private void TimerDisparition_Tick(object sender, EventArgs e)
         {
             this.Opacity -= 0.1;
             Disparition();
-           
         }
+        #endregion [ TIMER]
 
+        #region [METHODES]
         private void FormLocation()
         {
-            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
             int parentWidth = FormParent.Width;
             int parentHeight = FormParent.Height;
             int parentLocX = FormParent.Location.X;
@@ -187,7 +183,7 @@ namespace F2a_Notification
 
         private void SlideAnimation()
         {
-            switch(Position)
+            switch (Position)
             {
                 case Position.CenterScreen:
                     TopToBottomSlideAnim();
@@ -222,7 +218,7 @@ namespace F2a_Notification
                     BottomToTopSlideAnim();
                     break;
 
-                case Position.BottomLeft:  
+                case Position.BottomLeft:
                     BottomToTopSlideAnim();
                     break;
 
@@ -243,7 +239,7 @@ namespace F2a_Notification
             switch (Position)
             {
                 case Position.CenterScreen:
-                    
+
                     break;
                 case Position.TopLeft:
                     BottomToTopDisparition();
@@ -258,7 +254,7 @@ namespace F2a_Notification
                     break;
 
                 case Position.RightCenter:
-                    this.Left -= 2;
+                    this.Left += 2;
                     if (this.Opacity <= 0)
                     {
                         this.Close();
@@ -279,7 +275,7 @@ namespace F2a_Notification
                     break;
 
                 case Position.LeftCenter:
-                    this.Left += 2;
+                    this.Left -= 2;
                     if (this.Opacity <= 0)
                     {
                         this.Close();
@@ -330,5 +326,86 @@ namespace F2a_Notification
                 TimerDisparition.Stop();
             }
         }
+        #endregion [METHODES]
+
+
+        #region [MOUSE EVENTS]
+        private void LabelTitre_MouseEnter(object sender, EventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void LabelTitre_MouseLeave(object sender, EventArgs e)
+        {
+            
+            TimerTemps.Start();
+        }
+
+        private void LabelTitre_MouseUp(object sender, MouseEventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void LabelMessage_MouseEnter(object sender, EventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void LabelMessage_MouseUp(object sender, MouseEventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void LabelMessage_MouseLeave(object sender, EventArgs e)
+        {
+            TimerTemps.Start();
+        }
+
+        private void PictureBoxIcon_MouseEnter(object sender, EventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void PictureBoxIcon_MouseUp(object sender, MouseEventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void PictureBoxIcon_MouseLeave(object sender, EventArgs e)
+        {
+            TimerTemps.Start();
+        }
+
+        private void PanelIcon_MouseEnter(object sender, EventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void PanelIcon_MouseUp(object sender, MouseEventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void PanelIcon_MouseLeave(object sender, EventArgs e)
+        {
+            TimerTemps.Start();
+        }
+
+        private void PanelBarre_MouseEnter(object sender, EventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void PanelBarre_MouseUp(object sender, MouseEventArgs e)
+        {
+            TimerTemps.Stop();
+        }
+
+        private void PanelBarre_MouseLeave(object sender, EventArgs e)
+        {
+            TimerTemps.Start();
+        }
+
+        #endregion [MOUSE EVENTS]
     }
 }

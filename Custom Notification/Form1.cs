@@ -15,17 +15,7 @@ namespace F2a_Notification
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Threading.Timer timer = new System.Threading.Timer(Repeat, null, 0, 2000);
-
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Green, position: Position.TopLeft);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Violet, position: Position.LeftCenter);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.DarkTurquoise, position: Position.TopCenter);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Blue, position: Position.TopRight);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Gray, position: Position.RightCenter);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Gold, position: Position.BottomRight);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.BlueViolet, position: Position.BottomCenter);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.SandyBrown, position: Position.BottomLeft);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Navy, position: Position.LeftCenter);
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Red, position: Position.CenterScreen);
+            //AfficherToutesLesNotifs();
         }
 
         private void Repeat (object o)
@@ -41,12 +31,12 @@ namespace F2a_Notification
         private void RCBtn_Click(object sender, EventArgs e)
         {
             string message = "Produit Ajouté";
-            F2aNotif.Notification(this, "TERMINER!", message, backColor: Color.Red, position: Position.RightCenter);
+            F2aNotif.Notification(this, "TERMINER!", message, backColor: Color.White, textColor: Color.Black, position: Position.RightCenter, separatorColor: Color.DarkCyan);
         }
 
         private void TRBtn_Click(object sender, EventArgs e)
         {
-            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Chocolate, position: Position.TopRight);
+            F2aNotif.Notification(this, "TERMINER!TERMINER!TERMINER!TERMINER!", "Produit Ajouté Produit Ajouté Produit Ajouté Produit Ajouté Produit Ajouté Produit Ajouté Produit Ajouté Produit Ajouté", backColor: Color.Chocolate, position: Position.TopRight);
         }
 
         private void TCBtn_Click(object sender, EventArgs e)
@@ -80,5 +70,25 @@ namespace F2a_Notification
         }
 
         
+
+        private void AfficherToutesLesNotifs()
+        {
+
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Green, position: Position.TopLeft);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Violet, position: Position.LeftCenter);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.DarkTurquoise, position: Position.TopCenter);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Blue, position: Position.TopRight);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Gray, position: Position.RightCenter);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Gold, position: Position.BottomRight);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.BlueViolet, position: Position.BottomCenter);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.SandyBrown, position: Position.BottomLeft);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Navy, position: Position.LeftCenter);
+            F2aNotif.Notification(this, "TERMINER!", "Produit Ajouté", backColor: Color.Red, position: Position.CenterScreen);
+        }
+
+        private void Form1_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
     }
 }
