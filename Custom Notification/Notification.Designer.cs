@@ -55,18 +55,18 @@
             this.PanelTitrePrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitrePrincipal.Location = new System.Drawing.Point(0, 0);
             this.PanelTitrePrincipal.Name = "PanelTitrePrincipal";
-            this.PanelTitrePrincipal.Size = new System.Drawing.Size(260, 53);
+            this.PanelTitrePrincipal.Size = new System.Drawing.Size(162, 30);
             this.PanelTitrePrincipal.TabIndex = 3;
             // 
             // PanelTitre0
             // 
             this.PanelTitre0.AutoSize = true;
-            this.PanelTitre0.Controls.Add(this.LabelTitre);
             this.PanelTitre0.Controls.Add(this.ProgressBarTemps);
+            this.PanelTitre0.Controls.Add(this.LabelTitre);
             this.PanelTitre0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelTitre0.Location = new System.Drawing.Point(34, 0);
             this.PanelTitre0.Name = "PanelTitre0";
-            this.PanelTitre0.Size = new System.Drawing.Size(226, 53);
+            this.PanelTitre0.Size = new System.Drawing.Size(128, 30);
             this.PanelTitre0.TabIndex = 1;
             // 
             // LabelTitre
@@ -75,11 +75,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelTitre.AutoEllipsis = true;
-            this.LabelTitre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitre.Location = new System.Drawing.Point(3, 4);
+            this.LabelTitre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTitre.Location = new System.Drawing.Point(3, 5);
             this.LabelTitre.Name = "LabelTitre";
-            this.LabelTitre.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.LabelTitre.Size = new System.Drawing.Size(215, 44);
+            this.LabelTitre.Size = new System.Drawing.Size(117, 21);
             this.LabelTitre.TabIndex = 1;
             this.LabelTitre.Text = "TITRE";
             this.LabelTitre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -89,7 +88,7 @@
             // 
             // ProgressBarTemps
             // 
-            this.ProgressBarTemps.Location = new System.Drawing.Point(142, 12);
+            this.ProgressBarTemps.Location = new System.Drawing.Point(72, 11);
             this.ProgressBarTemps.Name = "ProgressBarTemps";
             this.ProgressBarTemps.Size = new System.Drawing.Size(62, 13);
             this.ProgressBarTemps.TabIndex = 2;
@@ -102,7 +101,7 @@
             this.PanelIcon.Location = new System.Drawing.Point(0, 0);
             this.PanelIcon.MinimumSize = new System.Drawing.Size(34, 35);
             this.PanelIcon.Name = "PanelIcon";
-            this.PanelIcon.Size = new System.Drawing.Size(34, 53);
+            this.PanelIcon.Size = new System.Drawing.Size(34, 35);
             this.PanelIcon.TabIndex = 0;
             this.PanelIcon.MouseEnter += new System.EventHandler(this.PanelIcon_MouseEnter);
             this.PanelIcon.MouseLeave += new System.EventHandler(this.PanelIcon_MouseLeave);
@@ -112,7 +111,7 @@
             // 
             this.PictureBoxIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PictureBoxIcon.Image = global::F2a_Notification.Properties.Resources.Done_26px;
-            this.PictureBoxIcon.Location = new System.Drawing.Point(5, 14);
+            this.PictureBoxIcon.Location = new System.Drawing.Point(5, 3);
             this.PictureBoxIcon.MaximumSize = new System.Drawing.Size(25, 25);
             this.PictureBoxIcon.MinimumSize = new System.Drawing.Size(25, 25);
             this.PictureBoxIcon.Name = "PictureBoxIcon";
@@ -143,9 +142,9 @@
             // 
             this.PanelBarre.BackColor = System.Drawing.Color.White;
             this.PanelBarre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelBarre.Location = new System.Drawing.Point(0, 53);
+            this.PanelBarre.Location = new System.Drawing.Point(0, 30);
             this.PanelBarre.Name = "PanelBarre";
-            this.PanelBarre.Size = new System.Drawing.Size(260, 5);
+            this.PanelBarre.Size = new System.Drawing.Size(162, 5);
             this.PanelBarre.TabIndex = 4;
             this.PanelBarre.MouseEnter += new System.EventHandler(this.PanelBarre_MouseEnter);
             this.PanelBarre.MouseLeave += new System.EventHandler(this.PanelBarre_MouseLeave);
@@ -153,35 +152,40 @@
             // 
             // PanelMessage
             // 
+            this.PanelMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelMessage.AutoSize = true;
             this.PanelMessage.Controls.Add(this.LabelMessage);
-            this.PanelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelMessage.Location = new System.Drawing.Point(0, 58);
+            this.PanelMessage.Location = new System.Drawing.Point(0, 35);
             this.PanelMessage.Name = "PanelMessage";
-            this.PanelMessage.Size = new System.Drawing.Size(260, 90);
+            this.PanelMessage.Size = new System.Drawing.Size(260, 68);
             this.PanelMessage.TabIndex = 7;
             // 
             // LabelMessage
             // 
+            this.LabelMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelMessage.AutoEllipsis = true;
-            this.LabelMessage.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMessage.Location = new System.Drawing.Point(0, 0);
+            this.LabelMessage.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMessage.Location = new System.Drawing.Point(0, 3);
             this.LabelMessage.Name = "LabelMessage";
-            this.LabelMessage.Padding = new System.Windows.Forms.Padding(8);
-            this.LabelMessage.Size = new System.Drawing.Size(260, 91);
+            this.LabelMessage.Padding = new System.Windows.Forms.Padding(8, 5, 8, 8);
+            this.LabelMessage.Size = new System.Drawing.Size(162, 36);
             this.LabelMessage.TabIndex = 1;
-            this.LabelMessage.Text = "Message";
+            this.LabelMessage.Text = "Message command.ExecuteNonQueryAsync(); command.ExecuteNonQueryAsync();command.Ex" +
+    "ecuteNonQueryAsync();command.ExecuteNonQueryAsync();command.ExecuteNonQueryAsync" +
+    "();";
             this.LabelMessage.MouseEnter += new System.EventHandler(this.LabelMessage_MouseEnter);
             this.LabelMessage.MouseLeave += new System.EventHandler(this.LabelMessage_MouseLeave);
             this.LabelMessage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LabelMessage_MouseUp);
             // 
             // Notification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(260, 148);
+            this.ClientSize = new System.Drawing.Size(162, 74);
             this.Controls.Add(this.PanelMessage);
             this.Controls.Add(this.PanelBarre);
             this.Controls.Add(this.PanelTitrePrincipal);

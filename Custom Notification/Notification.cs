@@ -47,7 +47,7 @@ namespace F2a_Notification
         #endregion [VARIABLES]
 
         #region [FORM EVENTS]
-        public Notification(Form parentForm, string titre, string message, Image icon, Color backColor, Color textColor, Color separatorColor, Position position)
+        public Notification(Form parentForm, string titre, string message, Image icon, Color backColor, Color textColor, Color separatorColor, Position position, int TitleBoxHeight, int MessageBoxHeight)
         {
             InitializeComponent();
             this.FormParent = parentForm;
@@ -67,6 +67,10 @@ namespace F2a_Notification
             LabelMessage.ForeColor = textColor;
             PanelBarre.BackColor = separatorColor;
 
+            
+            //PanelTitrePrincipal.Height = TitleBoxHeight;
+            //PanelMessage.Height = MessageBoxHeight;
+           
             //DEFINIR BORD ARRONDI
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
         }

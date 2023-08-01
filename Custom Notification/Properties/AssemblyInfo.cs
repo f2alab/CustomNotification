@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("F2A-CORPORATION")]
 [assembly: AssemblyProduct("F2A Notification")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("Copyright ©  F2A-LAB 2023")]
 [assembly: AssemblyTrademark("F2A-LAB")]
 [assembly: AssemblyCulture("")]
 

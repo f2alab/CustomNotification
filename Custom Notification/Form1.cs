@@ -31,7 +31,7 @@ namespace F2a_Notification
         private void RCBtn_Click(object sender, EventArgs e)
         {
             string message = "Produit Ajouté";
-            F2aNotif.Notification(this, "TERMINER!", message, backColor: Color.White, textColor: Color.Black, position: Position.RightCenter, separatorColor: Color.DarkCyan);
+            F2aNotif.Notification(this, "TERMINER!", message, backColor: Color.White, textColor: Color.Black, position: Position.RightCenter, separatorColor: Color.DarkCyan, messageBoxHeight: 30, titleBoxHeight: 10);
         }
 
         private void TRBtn_Click(object sender, EventArgs e)

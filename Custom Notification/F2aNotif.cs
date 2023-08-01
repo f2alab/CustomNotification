@@ -13,9 +13,9 @@ namespace F2a_Notification
     public class F2aNotif
     {
         
-        public static void Notification (Form parentForm, string titre, string message, Image icon = null, Color? backColor = null , Color? textColor = null, Color? separatorColor = null, Position position = Position.BottomRight)
+        public static void Notification (Form parentForm, string titre, string message, Image icon = null, Color? backColor = null , Color? textColor = null, Color? separatorColor = null, Position position = Position.BottomRight, int titleBoxHeight=30, int messageBoxHeight=20)
         {
-            Notification notification = new Notification(parentForm, titre, message, icon ?? Resources.Done_26px, backColor ?? Color.FromArgb(0, 192, 0), textColor??Color.White, separatorColor ?? Color.White, position);
+            Notification notification = new Notification(parentForm, titre, message, icon ?? Resources.Done_26px, backColor ?? Color.FromArgb(0, 192, 0), textColor??Color.White, separatorColor ?? Color.White, position, titleBoxHeight, messageBoxHeight);
             notification.Show();
         }
     }
